@@ -97,7 +97,7 @@ apply() {
         
     debug "$N -> $F, apply ..."
     
-    git am $F 2>&1 | tee -a $UP_LOG
+    git apply $F 2>&1 | tee -a $UP_LOG
 
     rc=$?
     
