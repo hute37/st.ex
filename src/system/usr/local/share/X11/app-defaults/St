@@ -20,7 +20,7 @@ st.cursorshape:       2
 ! thickness of underline and bar cursors
 st.cursorthickness:   2
 
-! 0: normal blinking, 1: leave cursor border and blink with cursor's background
+! 0: normal blinking, 1: leave cursor border and blink with cursor s background
 st.cursorblinkstyle:  0
 
 ! 0: cursor blinks with a constant interval; 1: blinking cycle resets on key input
@@ -60,7 +60,7 @@ st.boxdraw_braille: 0
 ! opacity==255 means what terminal will be not transparent, 0 - fully transparent
 ! (float values in range 0 to 1.0 could be used instead)
 st.opacity:      255
-! (0|1) don't pre-multiply color values of the pixels when using transparency
+! (0|1) don t pre-multiply color values of the pixels when using transparency
 ! (useful for the systems where composite manager not running all the time,
 ! as color pre-multiplication will make the "opaque" colors look darker/lighter
 ! without the composition)
