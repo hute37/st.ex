@@ -125,10 +125,8 @@ apply() {
         
 }
 
-do_apply_all() {
-    
-    exit_rc=0
-    failed=""
+
+do_apply_b10() {
     
     #//////////////////////////////////////////////////////////
     
@@ -136,22 +134,68 @@ do_apply_all() {
     # @see: https://st.suckless.org/patches/
     #
 
-    apply st-newterm
-    apply st-font2
-    apply st-keyboard_select
     apply st-alpha
     apply st-scrollback-2
     apply st-scrollback-mouse
     apply st-ligatures-alpha-scrollback
+
+    #//////////////////////////////////////////////////////////
+
+}
+
+do_apply_b20() {
+    
+    #//////////////////////////////////////////////////////////
+    
+    ##
+    # @see: https://st.suckless.org/patches/
+    #
+    
+    apply st-newterm
+    apply st-font2
     apply st-visualbell
-    apply st-keyboard_select
-    # apply st-invert
     apply st-w3m
     apply st-netwmicon
     apply st-colors-at-launch
-    apply st-workingdir
     apply st-nordtheme
     apply st-xresources
+
+    
+
+    # apply st-keyboard_select
+    # apply st-invert
+    # apply st-workingdir
+
+    #//////////////////////////////////////////////////////////
+
+}
+
+do_apply_b30() {
+    
+    #//////////////////////////////////////////////////////////
+    
+    ##
+    # @see: https://st.suckless.org/patches/
+    #
+    
+    apply st-keyboard_select
+    apply st-invert
+    apply st-workingdir
+
+    #//////////////////////////////////////////////////////////
+
+}
+
+do_apply_all() {
+    
+    exit_rc=0
+    failed=""
+    
+    #//////////////////////////////////////////////////////////
+    
+    do_apply_b10
+    do_apply_b20
+    # do_apply_b30
 
     #//////////////////////////////////////////////////////////
 
