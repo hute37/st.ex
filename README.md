@@ -1,7 +1,7 @@
 # hute37's build of st - the simple (suckless) terminal
 
 
-![master](https://github.com/hute37/st/workflows/CI-build/badge.svg?branch=master)
+![master](https://github.com/hute37/st/workflows/CI-Build/badge.svg?branch=master)
 
 Patched fork of The ["suckless terminal (st)"](https://st.suckless.org/)
 
