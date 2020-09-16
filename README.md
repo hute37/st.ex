@@ -11,10 +11,21 @@ Patched fork of The ["suckless terminal (st)"](https://st.suckless.org/)
 
 ## Patches
 
+### init-bundle
+
+- newterm
+- font2
+- visualbell
+- w3m
+- netwmicon
+- colors-at-launch
+- nordtheme
+- xresources
 
 
 
 ## Credits
 
-- [Luke Smith st](https://github.com/LukeSmithxyz/st)
+- [LukeSmithxyz/st](https://github.com/LukeSmithxyz/st)
+- [gnotclub/xst](https://github.com/gnotclub/xst)
 
