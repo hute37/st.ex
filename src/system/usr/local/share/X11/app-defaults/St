@@ -3,7 +3,7 @@
 ! see src/config.h for more information about option meanings.
 
 ! --- These options only take effect on startup. ---
-st.termname:     xst-256color
+st.termname:     st-256color
 
 ! Set to a non-zero value to disable window decorations (titlebar, etc) and go borderless.
 st.borderless:        0
