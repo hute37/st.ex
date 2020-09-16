@@ -136,7 +136,6 @@ do_apply_b10() {
 
     apply st-alpha
     apply st-scrollback-2
-    apply st-boxdraw
 
     #//////////////////////////////////////////////////////////
 
@@ -182,6 +181,7 @@ do_apply_b30() {
     apply st-workingdir
 
     apply st-scrollback-mouse
+    apply st-boxdraw
     apply st-ligatures-alpha-scrollback
     
     #//////////////////////////////////////////////////////////
@@ -195,8 +195,8 @@ do_apply_all() {
     
     #//////////////////////////////////////////////////////////
     
-    do_apply_b10
-    # do_apply_b20
+    # do_apply_b10
+    do_apply_b20
     # do_apply_b30
 
     #//////////////////////////////////////////////////////////
