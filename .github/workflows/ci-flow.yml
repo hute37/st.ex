@@ -8,10 +8,10 @@ jobs:
   build:
     name: ci-build
     runs-on: ubuntu-latest
-    uses: actions/checkout@master
+    - uses: actions/checkout@master
       with:
         fetch-depth: 1
     - name: make (compile)
         env:
-          TOKEN: sec3et
+          - TOKEN: sec3et
         run: make
