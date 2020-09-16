@@ -1,4 +1,4 @@
-name: CI:Build
+name: CI-Build
 on:
   push:
     branches:
@@ -6,7 +6,7 @@ on:
       - stable
 jobs:
   build:
-    name: ci-build
+    name: ci.build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
