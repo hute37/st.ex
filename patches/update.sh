@@ -79,56 +79,47 @@ apply() {
         die "cannot find patch for $N in $UP_BASE/$UP_PATH"
     fi
 
-    debug "verify patch: $N -> $F, ..."
+    debug "$N -> $F, verify ..."
 
-    # git apply --stat $F 2>&1 | tee -a $UP_LOG
-
-    # rc=${PIPESTATUS[0]}
-
-    # if [ ! $rc ]; then
-    #     error "verify patch (stat) #ERR($rc)!: $N -> $F"
-    #     die  "update failed!"
-    # fi
-        
     git apply --check $F 2>&1 | tee -a $UP_LOG
 
     rc=$?
 
     if [ $rc != 0 ]; then
-        error "verify patch (check) #ERR($rc)!: $N -> $F"
+        error "$N -> $F, verify #ERR($rc)!"
         failed="$failed $N"
         exit_rc=1
     fi
-    info "verify patch: $N -> $F, done."
+    info "$N -> $F, verify, done."
 
     case "$rc.${UP_DRY}" in
         0.0)
         
-    debug "applying patch: $N -> $F, ..."
+    debug "$N -> $F, apply ..."
     
     git am $F 2>&1 | tee -a $UP_LOG
 
     rc=$?
     
     if [ $rc != 0 ]; then
-        error "apply patch (exec) #ERR($rc)!: $N -> $F"
+        error "$N -> $F, apply #ERR($rc)!"
         failed="$failed $N"
         exit_rc=1
     fi
         
-    info "applying patch: $N -> $F, done"
+    info "$N -> $F, apply, done."
     ;;
         *.*)
-            warn "check failed, skip patch: $N -> $F"
+            warn "$N -> $F, check failed => skip"
             ;;
         *)
-            warn "dry mode, skip patch: $N -> $F"
+            warn "$N -> $F, dry mode => skip"
             ;;
     esac
 
     info "applying patch: $N -> $F, done."
 
-    echo "--- $rc"
+    echo "--- $rc"  | tee -a $UP_LOG
     #echo "--- rc:$rc  (exit_rc: $exit_rc -- failed: $failed)"
 
         
