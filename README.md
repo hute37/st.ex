@@ -1,7 +1,14 @@
 # hute37's build of st - the simple (suckless) terminal
 
 
-<a href="https://github.com/hute37/st/actions?query=workflow%3ACI-Build"><img alt="make@master" src="https://github.com/hute37/st/workflows/CI-Build/badge.svg?branch=master"></a>
+
+| branch   | status |
+|----------|--------|
+| main     | [![CI.Build](https://github.com/hute37/st/workflows/CI-Build/badge.svg?branch=master)](https://github.com/hute37/st/actions?query=workflow%3ACI-Build) |
+| stable   | [![CI.Build](https://github.com/hute37/st/workflows/CI-Build/badge.svg?branch=stable)](https://github.com/hute37/st/actions?query=workflow%3ACI-Build) |
+| testing  | [![CI.Build](https://github.com/hute37/st/workflows/CI-Build/badge.svg?branch=testing)](https://github.com/hute37/st/actions?query=workflow%3ACI-Build) |
+| unstable | [![CI.Build](https://github.com/hute37/st/workflows/CI-Build/badge.svg?branch=unstable)](https://github.com/hute37/st/actions?query=workflow%3ACI-Build) |
+
 
 Patched fork of The ["suckless terminal (st)"](https://st.suckless.org/)
 
@@ -21,6 +28,8 @@ Patched fork of The ["suckless terminal (st)"](https://st.suckless.org/)
 - colors-at-launch
 - nordtheme
 - xresources
+- scrollback
+- scrollback-mouse
 
 
 
