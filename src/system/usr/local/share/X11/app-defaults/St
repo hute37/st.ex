@@ -121,9 +121,16 @@ st.disable_alpha_correction: 0
 #define nord14 #A3BE8C
 #define nord15 #B48EAD
 
-st.foreground:   nord4
-st.background:   nord0
-st.cursorColor:  nord4
+#define nord_bg #04080a
+#define nord_fg #80c0e0
+#define nord_cr #c0e0f0
+
+st.foreground:   nord_fg
+st.background:   nord_bg
+st.cursorColor:  nord_cr
+!st.foreground:   nord4
+!st.background:   nord0
+!st.cursorColor:  nord4
 st.fading: 35
 st.fadeColor: nord3
 
