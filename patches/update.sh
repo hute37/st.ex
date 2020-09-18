@@ -155,7 +155,7 @@ do_apply_b20() {
     apply st-w3m
     apply st-netwmicon
     apply st-colors-at-launch
-    apply st-nordtheme
+    # apply st-nordtheme
     apply st-xresources
 
     
