@@ -1102,6 +1102,7 @@ kscrollup(const Arg* a)
 	}
 }
 
+void
 newterm(const Arg* a)
 {
 	switch (fork()) {
@@ -1109,7 +1110,9 @@ newterm(const Arg* a)
 		die("fork failed: %s\n", strerror(errno));
 		break;
 	case 0:
-		chdir(getcwd_by_pid(pid));
+                if (chdir(getcwd_by_pid(pid)) < 0) {
+		   fprintf(stderr, "Couldn't cd to pid wd: %s\n", strerror(errno));
+                }
 		execlp("st", "./st", NULL);
 		break;
 	}
@@ -1122,7 +1125,7 @@ static char *getcwd_by_pid(pid_t pid) {
 }
 
 void
-tscrolldown(int orig, int n)
+tscrolldown(int orig, int n, int copyhist)
 {
 	int i;
 	Line temp;
