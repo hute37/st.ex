@@ -7,12 +7,16 @@
  */
 /*::
 static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-*/
 static char *font = "Iosevka Nerd Font:pixelsize=14:antialias=true:autohint=true";
+*/
+static char *font = "Fantasque Sans Mono:pixelsize=22:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
 /*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
 /*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
+	"Monospace:pixelsize=12:antialias=true:autohint=true",
+	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true",
+	"Iosevka Nerd Font:pixelsize=14:antialias=true:autohint=true", 
 	"Hack Nerd Font Mono:pixelsize=14:antialias=true:autohint=true", 
 };
 
