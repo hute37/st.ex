@@ -29,6 +29,16 @@ _Patched fork of The ["suckless terminal (st)"](https://st.suckless.org/)_
 - scrollback
 - scrollback-mouse
 
+## Custom
+
+### fonts
+
+| Config       | Font |
+|--------------|------|
+| config       | "Iosevka Nerd Font:pixelsize=14:antialias=true:autohint=true;" |
+| xresources   | "Iosevka Nerd Font:pixelsize=18:antialias=true:autohint=true;" |
+| config.font2 | "Hack:pixelsize=14:antialias=true:autohint=true;" |
+
 
 
 ## Credits
