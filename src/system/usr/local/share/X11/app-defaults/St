@@ -121,9 +121,11 @@ st.disable_alpha_correction: 0
 #define nord14 #A3BE8C
 #define nord15 #B48EAD
 
+#define nord_cr #c0efff
 #define nord_bg #04080a
-#define nord_fg #80c0e0
-#define nord_cr #c0e0f0
+#define nord_fg #d8dee9
+!#define nord_bg #04080a
+!#define nord_fg #a0e0ff
 
 st.foreground:   nord_fg
 st.background:   nord_bg
