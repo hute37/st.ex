@@ -2,7 +2,9 @@ name: CI-Build
 on:
   push:
     branches:
-      - master
+      - main
+      - stable
+      - testing
       - stable
 jobs:
   build:

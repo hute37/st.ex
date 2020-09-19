@@ -2,7 +2,7 @@
 
 | branch   | status |
 |----------|--------|
-| main     | [![CI.Build](https://github.com/hute37/st/workflows/CI-Build/badge.svg?branch=master)](https://github.com/hute37/st/actions?query=workflow%3ACI-Build) |
+| main     | [![CI.Build](https://github.com/hute37/st/workflows/CI-Build/badge.svg?branch=main)](https://github.com/hute37/st/actions?query=workflow%3ACI-Build) |
 | stable   | [![CI.Build](https://github.com/hute37/st/workflows/CI-Build/badge.svg?branch=stable)](https://github.com/hute37/st/actions?query=workflow%3ACI-Build) |
 | testing  | [![CI.Build](https://github.com/hute37/st/workflows/CI-Build/badge.svg?branch=testing)](https://github.com/hute37/st/actions?query=workflow%3ACI-Build) |
 | unstable | [![CI.Build](https://github.com/hute37/st/workflows/CI-Build/badge.svg?branch=unstable)](https://github.com/hute37/st/actions?query=workflow%3ACI-Build) |
