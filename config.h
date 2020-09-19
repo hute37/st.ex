@@ -108,7 +108,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
-static const char *colorname[] = {
+static const char *colorname_nordtheme[] = { /* #colorscheme: 'nordtheme' */
 	/* 8 normal colors */
 	"#3b4252", /* black   */
 	"#bf616a", /* red     */
@@ -135,6 +135,37 @@ static const char *colorname[] = {
         "#0b0d10", /* background */ /* was: #2e3440, => /2 := #171a20, /4 := 0b0d10 */
         "#d8dee9", /* foreground */ /* was: #d8dee9 */
 };
+
+/* Terminal colors (16 first used in escape sequence) */
+static const char *colorname[] = { /* #colorscheme: 'blossom' */
+	/* 8 normal colors */
+	"#3E4755", /* black   */
+	"#E28479", /* red     */
+	"#70B791", /* green   */
+	"#C9C76B", /* yellow  */
+	"#839AEC", /* blue    */
+	"#D18493", /* magenta */
+	"#78B3C5", /* cyan    */
+	"#D2D2D4", /* white   */
+
+	/* 8 bright colors */
+	"#5D6473", /* black   */
+	"#EC8E83", /* red     */
+	"#7AC19B", /* green   */
+	"#D3D175", /* yellow  */
+	"#8DA4F6", /* blue    */
+	"#DB8E9D", /* magenta */
+	"#82BDCF", /* cyan    */
+	"#D1D1D3", /* white   */
+
+	[255] = 0,
+
+	/* more colors can be added after 255 to use with DefaultXX */
+    "#2F3846", /* background */
+    "#DFDFF2", /* foreground */
+    "#DFDFF2", /* cursor */
+};
+
 
 
 /*

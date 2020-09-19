@@ -9,7 +9,8 @@ st.termname:     st-256color
 st.borderless:        0
 
 ! --- The following options options can be reloaded via USR1 signal. ---
-st.font:              Iosevka Nerd Font:pixelsize=18:antialias=true:autohint=true;
+st.font:              Fantasque Sans Mono:pixelsize=22:antialias=true:autohint=true;
+!st.font:              Iosevka Nerd Font:pixelsize=18:antialias=true:autohint=true;
 !st.font:              Iosevka Nerd Font:pixelsize=14:antialias=true:autohint=true;
 !st.font:              Liberation Mono:pixelsize=12:antialias=true:autohint=true;
 
@@ -67,6 +68,50 @@ st.opacity:      255
 ! as color pre-multiplication will make the "opaque" colors look darker/lighter
 ! without the composition)
 st.disable_alpha_correction: 0
+
+
+! Color:      blossom
+! Repository: https://github.com/rajshekhar26/dotfiles/tree/master/.config/X11/colorschemes
+
+! special
+st.foreground:	#DFDFF2
+st.background:	#2F3846
+st.cursorColor:	#DFDFF2
+
+! black
+st.color0:       #3E4755
+st.color8:       #5D6473
+
+! red
+st.color1:       #E28479
+st.color9:       #EC8E83
+
+! green
+st.color2:       #70B791
+st.color10:      #7AC19B
+
+! yellow
+st.color3:       #C9C76B
+st.color11:      #D3D175
+
+! blue
+st.color4:       #839AEC
+st.color12:      #8DA4F6
+
+! magenta
+st.color5:       #D18493
+st.color13:      #DB8E9D
+
+! cyan
+st.color6:       #78B3C5
+st.color14:      #82BDCF
+
+! white
+st.color7:       #D2D2D4
+st.color15:      #D1D1D3
+
+
+
 
 ! colors -- this is the base16-twilight colorscheme.
 !st.background:   #050505
@@ -128,29 +173,34 @@ st.disable_alpha_correction: 0
 !#define nord_bg #04080a
 !#define nord_fg #a0e0ff
 
-st.foreground:   nord_fg
-st.background:   nord_bg
-st.cursorColor:  nord_cr
-!st.foreground:   nord4
-!st.background:   nord0
-!st.cursorColor:  nord4
-st.fading: 35
-st.fadeColor: nord3
+st.Nord.foreground:   nord_fg
+st.Nord.background:   nord_bg
+st.Nord.cursorColor:  nord_cr
+!st.Nord.foreground:   nord4
+!st.Nord.background:   nord0
+!st.Nord.cursorColor:  nord4
+st.Nord.fading: 35
+st.Nord.fadeColor: nord3
 
-st.color0: nord1
-st.color1: nord11
-st.color2: nord14
-st.color3: nord13
-st.color4: nord9
-st.color5: nord15
-st.color6: nord8
-st.color7: nord5
-st.color8: nord3
-st.color9: nord11
-st.color10: nord14
-st.color11: nord13
-st.color12: nord9
-st.color13: nord15
-st.color14: nord7
-st.color15: nord6
+st.Nord.color0: nord1
+st.Nord.color1: nord11
+st.Nord.color2: nord14
+st.Nord.color3: nord13
+st.Nord.color4: nord9
+st.Nord.color5: nord15
+st.Nord.color6: nord8
+st.Nord.color7: nord5
+st.Nord.color8: nord3
+st.Nord.color9: nord11
+st.Nord.color10: nord14
+st.Nord.color11: nord13
+st.Nord.color12: nord9
+st.Nord.color13: nord15
+st.Nord.color14: nord7
+st.Nord.color15: nord6
+
+
+
+
+
 
