@@ -10,6 +10,7 @@ st.borderless:        0
 
 ! --- The following options options can be reloaded via USR1 signal. ---
 st.font:              Iosevka Nerd Font:pixelsize=18:antialias=true:autohint=true;
+!st.font:              Iosevka Nerd Font:pixelsize=14:antialias=true:autohint=true;
 !st.font:              Liberation Mono:pixelsize=12:antialias=true:autohint=true;
 
 ! window padding
