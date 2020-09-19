@@ -137,7 +137,7 @@ static const char *colorname_nordtheme[] = { /* #colorscheme: 'nordtheme' */
 };
 
 /* Terminal colors (16 first used in escape sequence) */
-static const char *colorname[] = { /* #colorscheme: 'blossom' */
+static const char *colorname_blossom[] = { /* #colorscheme: 'blossom' */
 	/* 8 normal colors */
 	"#3E4755", /* black   */
 	"#E28479", /* red     */
@@ -164,6 +164,37 @@ static const char *colorname[] = { /* #colorscheme: 'blossom' */
     "#2F3846", /* background */
     "#DFDFF2", /* foreground */
     "#DFDFF2", /* cursor */
+};
+
+
+/* Terminal colors (16 first used in escape sequence) */
+static const char *colorname[] = { /* #colorscheme: 'gotham' */
+	/* 8 normal colors */
+	"#0a0f14", /* black   */
+	"#c33027", /* red     */
+	"#26a98b", /* green   */
+	"#edb54b", /* yellow  */
+	"#195465", /* blue    */
+	"#4e5165", /* magenta */
+	"#33859d", /* cyan    */
+	"#98d1ce", /* white   */
+
+	/* 8 bright colors */
+	"#10151b", /* black   */
+	"#d26939", /* red     */
+	"#081f2d", /* green   */
+	"#245361", /* yellow  */
+	"#093748", /* blue    */
+	"#888ba5", /* magenta */
+	"#599caa", /* cyan    */
+	"#d3ebe9", /* white   */
+
+	[255] = 0,
+
+	/* more colors can be added after 255 to use with DefaultXX */
+    "#0a0f14", /* background */
+    "#98d1ce", /* foreground */
+    "#98d1ce", /* cursor */
 };
 
 

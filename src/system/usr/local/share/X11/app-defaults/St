@@ -70,45 +70,88 @@ st.opacity:      255
 st.disable_alpha_correction: 0
 
 
+! Color:      gotham
+! Repository: https://terminal.sexy/#Cg8UmNHOCg8UwzAnJqmL7bVLGVRlTlFlM4WdmNHOEBUb0mk5CB8tJFNhCTdIiIulWZyq0-vp
+
+
+! special
+*.foreground:   #98d1ce
+*.background:   #0a0f14
+*.cursorColor:  #98d1ce
+
+! black
+*.color0:       #0a0f14
+*.color8:       #10151b
+
+! red
+*.color1:       #c33027
+*.color9:       #d26939
+
+! green
+*.color2:       #26a98b
+*.color10:      #081f2d
+
+! yellow
+*.color3:       #edb54b
+*.color11:      #245361
+
+! blue
+*.color4:       #195465
+*.color12:      #093748
+
+! magenta
+*.color5:       #4e5165
+*.color13:      #888ba5
+
+! cyan
+*.color6:       #33859d
+*.color14:      #599caa
+
+! white
+*.color7:       #98d1ce
+*.color15:      #d3ebe9
+
+
+
 ! Color:      blossom
 ! Repository: https://github.com/rajshekhar26/dotfiles/tree/master/.config/X11/colorschemes
 
 ! special
-st.foreground:	#DFDFF2
-st.background:	#2F3846
-st.cursorColor:	#DFDFF2
+st.Blossom.foreground:	#DFDFF2
+st.Blossom.background:	#2F3846
+st.Blossom.cursorColor:	#DFDFF2
 
 ! black
-st.color0:       #3E4755
-st.color8:       #5D6473
+st.Blossom.color0:       #3E4755
+st.Blossom.color8:       #5D6473
 
 ! red
-st.color1:       #E28479
-st.color9:       #EC8E83
+st.Blossom.color1:       #E28479
+st.Blossom.color9:       #EC8E83
 
 ! green
-st.color2:       #70B791
-st.color10:      #7AC19B
+st.Blossom.color2:       #70B791
+st.Blossom.color10:      #7AC19B
 
 ! yellow
-st.color3:       #C9C76B
-st.color11:      #D3D175
+st.Blossom.color3:       #C9C76B
+st.Blossom.color11:      #D3D175
 
 ! blue
-st.color4:       #839AEC
-st.color12:      #8DA4F6
+st.Blossom.color4:       #839AEC
+st.Blossom.color12:      #8DA4F6
 
 ! magenta
-st.color5:       #D18493
-st.color13:      #DB8E9D
+st.Blossom.color5:       #D18493
+st.Blossom.color13:      #DB8E9D
 
 ! cyan
-st.color6:       #78B3C5
-st.color14:      #82BDCF
+st.Blossom.color6:       #78B3C5
+st.Blossom.color14:      #82BDCF
 
 ! white
-st.color7:       #D2D2D4
-st.color15:      #D1D1D3
+st.Blossom.color7:       #D2D2D4
+st.Blossom.color15:      #D1D1D3
 
 
 
