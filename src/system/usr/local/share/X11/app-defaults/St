@@ -1,190 +1,255 @@
-! These are all possible options, presented with default values.
-! xst will fallback to *.option if st.option is not present.
-! see src/config.h for more information about option meanings.
+!!
+! st xresource file
+!
+
+! color scheme:
+!
+! cat  src/system/usr/local/share/X11/app-defaults/St | perl -lne 'print if s/.*#color\[(.*)\].*/$1/' | xargs -I{} echo 'st -n st-{} -T {} -e bash -i -c "ls -l /; echo {}; read z" &'
+!
+
 
 ! --- These options only take effect on startup. ---
-st.termname:     st-256color
+St*termname:     st-256color
 
 ! Set to a non-zero value to disable window decorations (titlebar, etc) and go borderless.
-st.borderless:        0
+St*borderless:        0
 
 ! --- The following options options can be reloaded via USR1 signal. ---
-st.font:              Fantasque Sans Mono:pixelsize=22:antialias=true:autohint=true;
-!st.font:              Iosevka Nerd Font:pixelsize=18:antialias=true:autohint=true;
-!st.font:              Iosevka Nerd Font:pixelsize=14:antialias=true:autohint=true;
-!st.font:              Liberation Mono:pixelsize=12:antialias=true:autohint=true;
+!St*font:              Fantasque Sans Mono:pixelsize=22:antialias=true:autohint=true;
+St*font:              Iosevka Nerd Font:pixelsize=18:antialias=true:autohint=true;
+!St*font:              Iosevka Nerd Font:pixelsize=14:antialias=true:autohint=true;
+!St*font:              Liberation Mono:pixelsize=12:antialias=true:autohint=true;
 
 ! window padding
-st.borderpx:          10
+St*borderpx:          10
 
 ! Available cursor values: 2 4 6 7 = █ _ | ☃ ( 1 3 5 are blinking versions)
-st.cursorshape:       2
+St*cursorshape:       2
 
 ! thickness of underline and bar cursors
-st.cursorthickness:   2
+St*cursorthickness:   2
 
 ! 0: normal blinking, 1: leave cursor border and blink with cursor s background
-st.cursorblinkstyle:  0
+St*cursorblinkstyle:  0
 
 ! 0: cursor blinks with a constant interval; 1: blinking cycle resets on key input
-st.cursorblinkontype: 1
+St*cursorblinkontype: 1
 
-st.disablebold:         0
-st.disableitalics:         0
-st.disableroman:         0
+St*disablebold:         0
+St*disableitalics:         0
+St*disableroman:         0
 
 ! Amount of lines scrolled
-st.scrollrate:  1
+St*scrollrate:  1
 
 ! Kerning / character bounding-box height multiplier
-st.chscale:           1.0
+St*chscale:           1.0
 
 ! Kerning / character bounding-box width multiplier
-st.cwscale:           1.0
+St*cwscale:           1.0
 
 ! blinking timeout for terminal and cursor blinking (0 disables)
-st.blinktimeout:      800
+St*blinktimeout:      800
 
 ! bell volume. Value between -100 and 100. (0 disables)
-st.bellvolume:        100
+St*bellvolume:        100
 
 ! 1: render most of the lines/blocks characters without using the font for
 ! perfect alignment between cells (U2500 - U259F except dashes/diagonals).
 ! Bold affects lines thickness if boxdraw_bold is not 0. Italic is ignored.
 ! 0: disable (render all U25XX glyphs normally from the font).
-st.boxdraw: 0
+St*boxdraw: 0
 
 ! (0|1) boxdraw(bold) enable toggle
-st.boxdraw_bold: 0
+St*boxdraw_bold: 0
 
 ! braille (U28XX):  1: render as adjacent "pixels",  0: use font
-st.boxdraw_braille: 0
+St*boxdraw_braille: 0
 
 ! opacity==255 means what terminal will be not transparent, 0 - fully transparent
 ! (float values in range 0 to 1.0 could be used instead)
-st.opacity:      255
+St*opacity:      255
 ! (0|1) don t pre-multiply color values of the pixels when using transparency
 ! (useful for the systems where composite manager not running all the time,
 ! as color pre-multiplication will make the "opaque" colors look darker/lighter
 ! without the composition)
-st.disable_alpha_correction: 0
+St*disable_alpha_correction: 0
 
 
-! Color:      gotham
+! #color[gotham]:      gotham
 ! Repository: https://terminal.sexy/#Cg8UmNHOCg8UwzAnJqmL7bVLGVRlTlFlM4WdmNHOEBUb0mk5CB8tJFNhCTdIiIulWZyq0-vp
 
 
 ! special
-*.foreground:   #98d1ce
-*.background:   #0a0f14
-*.cursorColor:  #98d1ce
+st-gotham*foreground:   #98d1ce
+st-gotham*background:   #0a0f14
+st-gotham*cursorColor:  #98d1ce
 
 ! black
-*.color0:       #0a0f14
-*.color8:       #10151b
+st-gotham*color0:       #0a0f14
+st-gotham*color8:       #10151b
 
 ! red
-*.color1:       #c33027
-*.color9:       #d26939
+st-gotham*color1:       #c33027
+st-gotham*color9:       #d26939
 
 ! green
-*.color2:       #26a98b
-*.color10:      #081f2d
+st-gotham*color2:       #26a98b
+st-gotham*color10:      #081f2d
 
 ! yellow
-*.color3:       #edb54b
-*.color11:      #245361
+st-gotham*color3:       #edb54b
+st-gotham*color11:      #245361
 
 ! blue
-*.color4:       #195465
-*.color12:      #093748
+st-gotham*color4:       #195465
+st-gotham*color12:      #093748
 
 ! magenta
-*.color5:       #4e5165
-*.color13:      #888ba5
+st-gotham*color5:       #4e5165
+st-gotham*color13:      #888ba5
 
 ! cyan
-*.color6:       #33859d
-*.color14:      #599caa
+st-gotham*color6:       #33859d
+st-gotham*color14:      #599caa
 
 ! white
-*.color7:       #98d1ce
-*.color15:      #d3ebe9
+st-gotham*color7:       #98d1ce
+st-gotham*color15:      #d3ebe9
 
 
 
-! Color:      blossom
+! #color[blossom]:      blossom
 ! Repository: https://github.com/rajshekhar26/dotfiles/tree/master/.config/X11/colorschemes
 
 ! special
-st.Blossom.foreground:	#DFDFF2
-st.Blossom.background:	#2F3846
-st.Blossom.cursorColor:	#DFDFF2
+st-blossom*foreground:	 #DFDFF2
+st-blossom*background:	 #2F3846
+st-blossom*cursorColor:	 #DFDFF2
 
 ! black
-st.Blossom.color0:       #3E4755
-st.Blossom.color8:       #5D6473
+st-blossom*color0:       #3E4755
+st-blossom*color8:       #5D6473
 
 ! red
-st.Blossom.color1:       #E28479
-st.Blossom.color9:       #EC8E83
+st-blossom*color1:       #E28479
+st-blossom*color9:       #EC8E83
 
 ! green
-st.Blossom.color2:       #70B791
-st.Blossom.color10:      #7AC19B
+st-blossom*color2:       #70B791
+st-blossom*color10:      #7AC19B
 
 ! yellow
-st.Blossom.color3:       #C9C76B
-st.Blossom.color11:      #D3D175
+st-blossom*color3:       #C9C76B
+st-blossom*color11:      #D3D175
 
 ! blue
-st.Blossom.color4:       #839AEC
-st.Blossom.color12:      #8DA4F6
+st-blossom*color4:       #839AEC
+st-blossom*color12:      #8DA4F6
 
 ! magenta
-st.Blossom.color5:       #D18493
-st.Blossom.color13:      #DB8E9D
+st-blossom*color5:       #D18493
+st-blossom*color13:      #DB8E9D
 
 ! cyan
-st.Blossom.color6:       #78B3C5
-st.Blossom.color14:      #82BDCF
+st-blossom*color6:       #78B3C5
+st-blossom*color14:      #82BDCF
 
 ! white
-st.Blossom.color7:       #D2D2D4
-st.Blossom.color15:      #D1D1D3
+st-blossom*color7:       #D2D2D4
+st-blossom*color15:      #D1D1D3
+
+
+! #color[twilight]:      twilight
+! Repository: https://hexang.org/yh/iTerm2-Color-Schemes/
+
+!
+! Generated with :
+! XRDB2Xreources.py
+!
+st-twilight*.foreground:  #ffffd4
+st-twilight*.background:  #141414
+st-twilight*.cursorColor: #ffffff
+!
+! Black
+st-twilight*.color0:      #141414
+st-twilight*.color8:      #262626
+!
+! Red
+st-twilight*.color1:      #c06d44
+st-twilight*.color9:      #de7c4c
+!
+! Green
+st-twilight*.color2:      #afb97a
+st-twilight*.color10:     #ccd88c
+!
+! Yellow
+st-twilight*.color3:      #c2a86c
+st-twilight*.color11:     #e2c47e
+!
+! Blue
+st-twilight*.color4:      #44474a
+st-twilight*.color12:     #5a5e62
+!
+! Magenta
+st-twilight*.color5:      #b4be7c
+st-twilight*.color13:     #d0dc8e
+!
+! Cyan
+st-twilight*.color6:      #778385
+st-twilight*.color14:     #8a989b
+!
+! White
+st-twilight*.color7:      #ffffd4
+st-twilight*.color15:     #ffffd4
+!
+! Bold, Italic, Underline
+st-twilight*.colorBD:     #ffffd4
+!*.colorIT:
+!*.colorUL:
 
 
 
+! #color[gruvbox]:      gruvbox-dark
+! -----------------------------------------------------------------------------
+! File: gruvbox-dark.xresources
+! Description: Retro groove colorscheme generalized
+! Author: morhetz <morhetz@gmail.com>
+! Source: https://github.com/morhetz/gruvbox-generalized
+! Last Modified: 6 Sep 2014
+! -----------------------------------------------------------------------------
 
-! colors -- this is the base16-twilight colorscheme.
-!st.background:   #050505
-!st.color0:       #050505
-!!!st.foreground:   #a7a7a7
-!!!st.background:   #1e1e1e
-!!!st.color0:       #1e1e1e
-!!!st.color1:       #cf6a4c
-!!!st.color2:       #8f9d6a
-!!!st.color3:       #f9ee98
-!!!st.color4:       #7587a6
-!!!st.color5:       #9b859d
-!!!st.color6:       #afc4db
-!!!st.color7:       #a7a7a7
-!!!st.color8:       #5f5a60
-!!!st.color9:       #cf6a4c
-!!!st.color10:      #8f9d6a
-!!!st.color11:      #f9ee98
-!!!st.color12:      #7587a6
-!!!st.color13:      #9b859d
-!!!st.color14:      #afc4db
-!!!st.color15:      #ffffff
-!!!st.color16:      #cda869
-!!!st.color17:      #9b703f
-!!!st.color18:      #323537
-!!!st.color19:      #464b50
-!!!st.color20:      #838184
-!!!st.color21:      #c3c3c3
+! hard contrast: *background: #1d2021
+st-gruvbox*background: #282828
+! soft contrast: *background: #32302f
+st-gruvbox*foreground: #ebdbb2
+! Black + DarkGrey
+st-gruvbox*color0:  #282828
+st-gruvbox*color8:  #928374
+! DarkRed + Red
+st-gruvbox*color1:  #cc241d
+st-gruvbox*color9:  #fb4934
+! DarkGreen + Green
+st-gruvbox*color2:  #98971a
+st-gruvbox*color10: #b8bb26
+! DarkYellow + Yellow
+st-gruvbox*color3:  #d79921
+st-gruvbox*color11: #fabd2f
+! DarkBlue + Blue
+st-gruvbox*color4:  #458588
+st-gruvbox*color12: #83a598
+! DarkMagenta + Magenta
+st-gruvbox*color5:  #b16286
+st-gruvbox*color13: #d3869b
+! DarkCyan + Cyan
+st-gruvbox*color6:  #689d6a
+st-gruvbox*color14: #8ec07c
+! LightGrey + White
+st-gruvbox*color7:  #a89984
+st-gruvbox*color15: #ebdbb2
 
 
+! #color[nord]:      nordtheme
 ! Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
 ! Copyright (c) 2016-present Sven Greb <code@svengreb.de>
 
@@ -216,33 +281,684 @@ st.Blossom.color15:      #D1D1D3
 !#define nord_bg #04080a
 !#define nord_fg #a0e0ff
 
-st.Nord.foreground:   nord_fg
+st-nord*foreground:   nord_fg
 st.Nord.background:   nord_bg
-st.Nord.cursorColor:  nord_cr
-!st.Nord.foreground:   nord4
-!st.Nord.background:   nord0
-!st.Nord.cursorColor:  nord4
-st.Nord.fading: 35
-st.Nord.fadeColor: nord3
+st-nord*cursorColor:  nord_cr
+!st-nord*foreground:   nord4
+!st-nord*background:   nord0
+!st-nord*cursorColor:  nord4
+st-nord*fading: 35
+st-nord*fadeColor: nord3
 
-st.Nord.color0: nord1
-st.Nord.color1: nord11
-st.Nord.color2: nord14
-st.Nord.color3: nord13
-st.Nord.color4: nord9
-st.Nord.color5: nord15
-st.Nord.color6: nord8
-st.Nord.color7: nord5
-st.Nord.color8: nord3
-st.Nord.color9: nord11
-st.Nord.color10: nord14
-st.Nord.color11: nord13
-st.Nord.color12: nord9
-st.Nord.color13: nord15
-st.Nord.color14: nord7
-st.Nord.color15: nord6
+st-nord*color0: nord1
+st-nord*color1: nord11
+st-nord*color2: nord14
+st-nord*color3: nord13
+st-nord*color4: nord9
+st-nord*color5: nord15
+st-nord*color6: nord8
+st-nord*color7: nord5
+st-nord*color8: nord3
+st-nord*color9: nord11
+st-nord*color10: nord14
+st-nord*color11: nord13
+st-nord*color12: nord9
+st-nord*color13: nord15
+st-nord*color14: nord7
+st-nord*color15: nord6
 
 
+
+! #color[drake]:      dracula
+! Dracula Xresources palette
+! Repository: https://github.com/dracula/xresources
+
+
+st-drake*.foreground: #F8F8F2
+st-drake*.background: #282A36
+st-drake*.color0:     #000000
+st-drake*.color8:     #4D4D4D
+st-drake*.color1:     #FF5555
+st-drake*.color9:     #FF6E67
+st-drake*.color2:     #50FA7B
+st-drake*.color10:    #5AF78E
+st-drake*.color3:     #F1FA8C
+st-drake*.color11:    #F4F99D
+st-drake*.color4:     #BD93F9
+st-drake*.color12:    #CAA9FA
+st-drake*.color5:     #FF79C6
+st-drake*.color13:    #FF92D0
+st-drake*.color6:     #8BE9FD
+st-drake*.color14:    #9AEDFE
+st-drake*.color7:     #BFBFBF
+st-drake*.color15:    #E6E6E6
+
+!!
+! Repository: http://terminal.sexy/
+
+! #color[mono]:      monotheme
+
+
+! special
+st-mono*foreground:   #ffffff
+st-mono*background:   #000000
+st-mono*cursorColor:  #ffffff
+
+! black
+st-mono*color0:       #000000
+st-mono*color8:       #202020
+
+! red
+st-mono*color1:       #6b6b6b
+st-mono*color9:       #464646
+
+! green
+st-mono*color2:       #c4c4c4
+st-mono*color10:      #f8f8f8
+
+! yellow
+st-mono*color3:       #b3b3b3
+st-mono*color11:      #eeeeee
+
+! blue
+st-mono*color4:       #999999
+st-mono*color12:      #7c7c7c
+
+! magenta
+st-mono*color5:       #717171
+st-mono*color13:      #adadad
+
+! cyan
+st-mono*color6:       #8a8a8a
+st-mono*color14:      #c0c0c0
+
+! white
+st-mono*color7:       #b5cabb
+st-mono*color15:      #99ac9e
+
+
+! #color[dawn]:      monotheme
+
+
+! special
+st-dawn*.foreground:   #9b9081
+st-dawn*.background:   #181b20
+st-dawn*.cursorColor:  #9b9081
+
+! black
+st-dawn*.color0:       #353535
+st-dawn*.color8:       #5f5f5f
+
+! red
+st-dawn*.color1:       #744b40
+st-dawn*.color9:       #785850
+
+! green
+st-dawn*.color2:       #6d6137
+st-dawn*.color10:      #6f6749
+
+! yellow
+st-dawn*.color3:       #765636
+st-dawn*.color11:      #776049
+
+! blue
+st-dawn*.color4:       #61564b
+st-dawn*.color12:      #696057
+
+! magenta
+st-dawn*.color5:       #6b4a49
+st-dawn*.color13:      #6f5a59
+
+! cyan
+st-dawn*.color6:       #435861
+st-dawn*.color14:      #525f66
+
+! white
+st-dawn*.color7:       #b3b3b3
+st-dawn*.color15:      #cdcdcd
+
+
+
+! #color[tango]:      xcolors.net:tango
+
+! special
+st-tango*.foreground:   #babdb6
+st-tango*.background:   #000000
+st-tango*.cursorColor:  #babdb6
+
+! black
+st-tango*.color0:       #2e3436
+st-tango*.color8:       #555753
+
+! red
+st-tango*.color1:       #cc0000
+st-tango*.color9:       #ef2929
+
+! green
+st-tango*.color2:       #4e9a06
+st-tango*.color10:      #8ae234
+
+! yellow
+st-tango*.color3:       #c4a000
+st-tango*.color11:      #fce94f
+
+! blue
+st-tango*.color4:       #3465a4
+st-tango*.color12:      #729fcf
+
+! magenta
+st-tango*.color5:       #75507b
+st-tango*.color13:      #ad7fa8
+
+! cyan
+st-tango*.color6:       #06989a
+st-tango*.color14:      #34e2e2
+
+! white
+st-tango*.color7:       #d3d7cf
+st-tango*.color15:      #eeeeec
+
+
+
+! #color[solar]:      base16-solarized-dark
+
+! special
+st-solar*.foreground:   #93a1a1
+st-solar*.background:   #002b36
+st-solar*.cursorColor:  #93a1a1
+
+! black
+st-solar*.color0:       #002b36
+st-solar*.color8:       #657b83
+
+! red
+st-solar*.color1:       #dc322f
+st-solar*.color9:       #dc322f
+
+! green
+st-solar*.color2:       #859900
+st-solar*.color10:      #859900
+
+! yellow
+st-solar*.color3:       #b58900
+st-solar*.color11:      #b58900
+
+! blue
+st-solar*.color4:       #268bd2
+st-solar*.color12:      #268bd2
+
+! magenta
+st-solar*.color5:       #6c71c4
+st-solar*.color13:      #6c71c4
+
+! cyan
+st-solar*.color6:       #2aa198
+st-solar*.color14:      #2aa198
+
+! white
+st-solar*.color7:       #93a1a1
+st-solar*.color15:      #fdf6e3
+
+
+
+! #color[lighter]:      base16-solarized-light
+
+
+! special
+st-lighter*.foreground:   #586e75
+st-lighter*.background:   #fdf6e3
+st-lighter*.cursorColor:  #586e75
+
+! black
+st-lighter*.color0:       #002b36
+st-lighter*.color8:       #657b83
+
+! red
+st-lighter*.color1:       #dc322f
+st-lighter*.color9:       #dc322f
+
+! green
+st-lighter*.color2:       #859900
+st-lighter*.color10:      #859900
+
+! yellow
+st-lighter*.color3:       #b58900
+st-lighter*.color11:      #b58900
+
+! blue
+st-lighter*.color4:       #268bd2
+st-lighter*.color12:      #268bd2
+
+! magenta
+st-lighter*.color5:       #6c71c4
+st-lighter*.color13:      #6c71c4
+
+! cyan
+st-lighter*.color6:       #2aa198
+st-lighter*.color14:      #2aa198
+
+! white
+st-lighter*.color7:       #93a1a1
+st-lighter*.color15:      #fdf6e3
+
+
+
+
+! #color[green]:      base16-greenscreen
+
+! special
+st-green*.foreground:   #f1ebeb
+st-green*.background:   #272822
+st-green*.cursorColor:  #f1ebeb
+
+! black
+st-green*.color0:       #48483e
+st-green*.color8:       #76715e
+
+! red
+st-green*.color1:       #dc2566
+st-green*.color9:       #fa2772
+
+! green
+st-green*.color2:       #8fc029
+st-green*.color10:      #a7e22e
+
+! yellow
+st-green*.color3:       #d4c96e
+st-green*.color11:      #e7db75
+
+! blue
+st-green*.color4:       #55bcce
+st-green*.color12:      #66d9ee
+
+! magenta
+st-green*.color5:       #9358fe
+st-green*.color13:      #ae82ff
+
+! cyan
+st-green*.color6:       #56b7a5
+st-green*.color14:      #66efd5
+
+! white
+st-green*.color7:       #acada1
+st-green*.color15:      #cfd0c2
+
+
+! #color[matrix]:      base16-greenscreen
+
+! special
+st-matrix*.foreground:   #00cc00
+st-matrix*.background:   #000000
+st-matrix*.cursorColor:  #00cc00
+
+! black
+st-matrix*.color0:       #000000
+st-matrix*.color8:       #000000
+
+! red
+st-matrix*.color1:       #55ff55
+st-matrix*.color9:       #55ff55
+
+! green
+st-matrix*.color2:       #00cc00
+st-matrix*.color10:      #55ff55
+
+! yellow
+st-matrix*.color3:       #00cc00
+st-matrix*.color11:      #55ff55
+
+! blue
+st-matrix*.color4:       #005500
+st-matrix*.color12:      #005500
+
+! magenta
+st-matrix*.color5:       #55ff55
+st-matrix*.color13:      #55ff55
+
+! cyan
+st-matrix*.color6:       #00cc00
+st-matrix*.color14:      #55ff55
+
+! white
+st-matrix*.color7:       #00cc00
+st-matrix*.color15:      #00cc00
+
+
+! #color[neon]:      xcolors.net-neon
+
+
+! special
+st-neon*.foreground:   #f8f8f8
+st-neon*.background:   #171717
+st-neon*.cursorColor:  #f8f8f8
+
+! black
+st-neon*.color0:       #171717
+st-neon*.color8:       #38252c
+
+! red
+st-neon*.color1:       #d81765
+st-neon*.color9:       #ff0000
+
+! green
+st-neon*.color2:       #97d01a
+st-neon*.color10:      #76b639
+
+! yellow
+st-neon*.color3:       #ffa800
+st-neon*.color11:      #e1a126
+
+! blue
+st-neon*.color4:       #16b1fb
+st-neon*.color12:      #289cd5
+
+! magenta
+st-neon*.color5:       #ff2491
+st-neon*.color13:      #ff2491
+
+! cyan
+st-neon*.color6:       #0fdcb6
+st-neon*.color14:      #0a9b81
+
+! white
+st-neon*.color7:       #ebebeb
+st-neon*.color15:      #f8f8f8
+
+
+
+
+! #color[iso]:      base16-isotope
+
+! special
+st-iso*.foreground:   #d0d0d0
+st-iso*.background:   #000000
+st-iso*.cursorColor:  #d0d0d0
+
+! black
+st-iso*.color0:       #000000
+st-iso*.color8:       #808080
+
+! red
+st-iso*.color1:       #ff0000
+st-iso*.color9:       #ff0000
+
+! green
+st-iso*.color2:       #33ff00
+st-iso*.color10:      #33ff00
+
+! yellow
+st-iso*.color3:       #ff0099
+st-iso*.color11:      #ff0099
+
+! blue
+st-iso*.color4:       #0066ff
+st-iso*.color12:      #0066ff
+
+! magenta
+st-iso*.color5:       #cc00ff
+st-iso*.color13:      #cc00ff
+
+! cyan
+st-iso*.color6:       #00ffff
+st-iso*.color14:      #00ffff
+
+! white
+st-iso*.color7:       #d0d0d0
+st-iso*.color15:      #ffffff
+
+
+
+
+
+
+! #color[monokai]:      monokai
+
+! special
+st-monokai*.foreground:   #f1ebeb
+st-monokai*.background:   #272822
+st-monokai*.cursorColor:  #f1ebeb
+
+! black
+st-monokai*.color0:       #48483e
+st-monokai*.color8:       #76715e
+
+! red
+st-monokai*.color1:       #dc2566
+st-monokai*.color9:       #fa2772
+
+! green
+st-monokai*.color2:       #8fc029
+st-monokai*.color10:      #a7e22e
+
+! yellow
+st-monokai*.color3:       #d4c96e
+st-monokai*.color11:      #e7db75
+
+! blue
+st-monokai*.color4:       #55bcce
+st-monokai*.color12:      #66d9ee
+
+! magenta
+st-monokai*.color5:       #9358fe
+st-monokai*.color13:      #ae82ff
+
+! cyan
+st-monokai*.color6:       #56b7a5
+st-monokai*.color14:      #66efd5
+
+! white
+st-monokai*.color7:       #acada1
+st-monokai*.color15:      #cfd0c2
+
+
+
+
+! #color[yousai]:      yousai
+
+! special
+st-yousai*.foreground:   #34302d
+st-yousai*.background:   #f5e7de
+st-yousai*.cursorColor:  #34302d
+
+! black
+st-yousai*.color0:       #666661
+st-yousai*.color8:       #7f7f7a
+
+! red
+st-yousai*.color1:       #992e2e
+st-yousai*.color9:       #b23636
+
+! green
+st-yousai*.color2:       #4c3226
+st-yousai*.color10:      #664233
+
+! yellow
+st-yousai*.color3:       #a67c53
+st-yousai*.color11:      #bf8f60
+
+! blue
+st-yousai*.color4:       #4c7399
+st-yousai*.color12:      #5986b2
+
+! magenta
+st-yousai*.color5:       #bf9986
+st-yousai*.color13:      #d9ae98
+
+! cyan
+st-yousai*.color6:       #d97742
+st-yousai*.color14:      #f2854a
+
+! white
+st-yousai*.color7:       #34302d
+st-yousai*.color15:      #4c4742
+
+
+
+! #color[brick]:      base16-3024
+
+! special
+st-brick*.foreground:   #a5a2a2
+st-brick*.background:   #090300
+st-brick*.cursorColor:  #a5a2a2
+
+! black
+st-brick*.color0:       #090300
+st-brick*.color8:       #5c5855
+
+! red
+st-brick*.color1:       #db2d20
+st-brick*.color9:       #db2d20
+
+! green
+st-brick*.color2:       #01a252
+st-brick*.color10:      #01a252
+
+! yellow
+st-brick*.color3:       #fded02
+st-brick*.color11:      #fded02
+
+! blue
+st-brick*.color4:       #01a0e4
+st-brick*.color12:      #01a0e4
+
+! magenta
+st-brick*.color5:       #a16a94
+st-brick*.color13:      #a16a94
+
+! cyan
+st-brick*.color6:       #b5e4f4
+st-brick*.color14:      #b5e4f4
+
+! white
+st-brick*.color7:       #a5a2a2
+st-brick*.color15:      #f7f7f7
+
+
+! #color[shape]:      base16-shapesfilter
+
+! special
+st-shape*.foreground:   #ababab
+st-shape*.background:   #000000
+st-shape*.cursorColor:  #ababab
+
+! black
+st-shape*.color0:       #000000
+st-shape*.color8:       #343434
+
+! red
+st-shape*.color1:       #e92f2f
+st-shape*.color9:       #e92f2f
+
+! green
+st-shape*.color2:       #0ed839
+st-shape*.color10:      #0ed839
+
+! yellow
+st-shape*.color3:       #dddd13
+st-shape*.color11:      #dddd13
+
+! blue
+st-shape*.color4:       #3b48e3
+st-shape*.color12:      #3b48e3
+
+! magenta
+st-shape*.color5:       #f996e2
+st-shape*.color13:      #f996e2
+
+! cyan
+st-shape*.color6:       #23edda
+st-shape*.color14:      #23edda
+
+! white
+st-shape*.color7:       #ababab
+st-shape*.color15:      #f9f9f9
+
+
+! #color[brewer]:      base16-brewer
+
+! special
+st-brewer*.foreground:   #b7b8b9
+st-brewer*.background:   #0c0d0e
+st-brewer*.cursorColor:  #b7b8b9
+
+! black
+st-brewer*.color0:       #0c0d0e
+st-brewer*.color8:       #737475
+
+! red
+st-brewer*.color1:       #e31a1c
+st-brewer*.color9:       #e31a1c
+
+! green
+st-brewer*.color2:       #31a354
+st-brewer*.color10:      #31a354
+
+! yellow
+st-brewer*.color3:       #dca060
+st-brewer*.color11:      #dca060
+
+! blue
+st-brewer*.color4:       #3182bd
+st-brewer*.color12:      #3182bd
+
+! magenta
+st-brewer*.color5:       #756bb1
+st-brewer*.color13:      #756bb1
+
+! cyan
+st-brewer*.color6:       #80b1d3
+st-brewer*.color14:      #80b1d3
+
+! white
+st-brewer*.color7:       #b7b8b9
+st-brewer*.color15:      #fcfdfe
+
+
+
+
+!!
+
+! DEFAULT: 
+
+
+! Color:      base16-brewer
+
+! special
+st*.foreground:   #b7b8b9
+st*.background:   #0c0d0e
+st*.cursorColor:  #b7b8b9
+
+! black
+st*.color0:       #0c0d0e
+st*.color8:       #737475
+
+! red
+st*.color1:       #e31a1c
+st*.color9:       #e31a1c
+
+! green
+st*.color2:       #31a354
+st*.color10:      #31a354
+
+! yellow
+st*.color3:       #dca060
+st*.color11:      #dca060
+
+! blue
+st*.color4:       #3182bd
+st*.color12:      #3182bd
+
+! magenta
+st*.color5:       #756bb1
+st*.color13:      #756bb1
+
+! cyan
+st*.color6:       #80b1d3
+st*.color14:      #80b1d3
+
+! white
+st*.color7:       #b7b8b9
+st*.color15:      #fcfdfe
 
 
 
