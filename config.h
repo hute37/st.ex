@@ -8,13 +8,15 @@
 /*::
 static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
 static char *font = "Iosevka Nerd Font:pixelsize=14:antialias=true:autohint=true";
-*/
 static char *font = "Fantasque Sans Mono:pixelsize=22:antialias=true:autohint=true";
+*/
+static char *font = "Iosevka Nerd Font:pixelsize=14:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
 /*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
 /*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
 	"Monospace:pixelsize=12:antialias=true:autohint=true",
+	"Liberation Mono:pixelsize=12:antialias=true:autohint=true",
 	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true",
 	"Iosevka Nerd Font:pixelsize=14:antialias=true:autohint=true", 
 	"Hack Nerd Font Mono:pixelsize=14:antialias=true:autohint=true", 
@@ -243,13 +245,6 @@ static unsigned int mousebg = 0;
 static unsigned int defaultattr = 11;
 
 /*
- * Force mouse select/shortcuts while mask is active (when MODE_MOUSE is set).
- * Note that if you want to use ShiftMask with selmasks, set this to an other
- * modifier, set to 0 to not use it.
- */
-static uint forcemousemod = ShiftMask;
-
-/*
  * Xresources preferences to load at startup
  */
 ResourcePref resources[] = {
@@ -285,17 +280,30 @@ ResourcePref resources[] = {
 		{ "chscale",      FLOAT,   &chscale },
 };
 
+
+/*
+ * Force mouse select/shortcuts while mask is active (when MODE_MOUSE is set).
+ * Note that if you want to use ShiftMask with selmasks, set this to an other
+ * modifier, set to 0 to not use it.
+ */
+static uint forcemousemod = ShiftMask;
+
 /*
  * Internal mouse shortcuts.
  * Beware that overloading Button1 will disable the selection.
  */
-
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
 /*	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} }, */
 /*	{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} }, */
-	{ ShiftMask,            Button4, kscrollup,      {.i = 5} },
-	{ ShiftMask,            Button5, kscrolldown,    {.i = 5} },
+/*	{ ShiftMask,            Button4, kscrollup,      {.i = 5} }, */
+/*	{ ShiftMask,            Button5, kscrolldown,    {.i = 5} }, */
+/*	{ XK_NO_MOD,            Button4, kscrollup,      {.i = 5},      0, /* !alt *\ -1 }, */
+/*	{ XK_NO_MOD,            Button5, kscrolldown,    {.i = 5},      0, /* !alt *\ -1 }, */
+	{ XK_NO_MOD,            Button4, kscrollup,      {.i = 5},      0, /* !alt */ -1 },
+	{ XK_NO_MOD,            Button5, kscrolldown,    {.i = 5},      0, /* !alt */ -1 },
+	{ ControlMask,          Button4, zoom,           {.f = +1} },
+	{ ControlMask,          Button5, zoom,           {.f = -1} },
  	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
 	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
@@ -313,6 +321,8 @@ static Shortcut shortcuts[] = {
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
 	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
 	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
+	{ ControlMask,          XK_plus,        zoom,           {.f = +1} },
+	{ ControlMask,          XK_minus,       zoom,           {.f = -1} },
 	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
