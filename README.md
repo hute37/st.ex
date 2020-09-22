@@ -28,6 +28,9 @@ _Patched fork of The ["suckless terminal (st)"](https://st.suckless.org/)_
 - xresources
 - scrollback
 - scrollback-mouse
+- scrollback-mouse-altscreen
+- scrollback-mouse-increment
+
 
 ## Custom
 
